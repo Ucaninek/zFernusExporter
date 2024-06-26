@@ -68,6 +68,7 @@
             B_Start.TabIndex = 2;
             B_Start.Text = "PDF Olustur";
             B_Start.UseVisualStyleBackColor = true;
+            B_Start.Click += B_Start_Click;
             // 
             // L_ProcessStatus
             // 
@@ -76,7 +77,7 @@
             L_ProcessStatus.Name = "L_ProcessStatus";
             L_ProcessStatus.Size = new Size(378, 356);
             L_ProcessStatus.TabIndex = 3;
-            L_ProcessStatus.Text = "Fernus Z-Kitap Bekleniyor...";
+            L_ProcessStatus.Text = "PDF Yapmak istediginiz Z-Kitabinizi bir kere acip kapamaniz yeterlidir.";
             L_ProcessStatus.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // linkLabel1
