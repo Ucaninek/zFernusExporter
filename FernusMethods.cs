@@ -1,11 +1,13 @@
-﻿using Org.BouncyCastle.Crypto.Engines;
+﻿/*
+ * Author: Zemi @ GitHub/Ucaninek
+ * Date: 2024
+ */
+
+
+using Org.BouncyCastle.Crypto.Engines;
 using Org.BouncyCastle.Crypto.Paddings;
 using Org.BouncyCastle.Crypto.Parameters;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace FernusSWFExporter
 {

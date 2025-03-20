@@ -29,13 +29,18 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             TB_Logs = new TextBox();
             GB_Logs = new GroupBox();
             B_Start = new Button();
             L_ProcessStatus = new Label();
             linkLabel1 = new LinkLabel();
             T_ProcessTimer = new System.Windows.Forms.Timer(components);
+            GB_Methods = new GroupBox();
+            RB_Sys1 = new RadioButton();
+            RB_Sysb = new RadioButton();
             GB_Logs.SuspendLayout();
+            GB_Methods.SuspendLayout();
             SuspendLayout();
             // 
             // TB_Logs
@@ -62,9 +67,9 @@
             // B_Start
             // 
             B_Start.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            B_Start.Location = new Point(12, 378);
+            B_Start.Location = new Point(12, 390);
             B_Start.Name = "B_Start";
-            B_Start.Size = new Size(378, 45);
+            B_Start.Size = new Size(378, 33);
             B_Start.TabIndex = 2;
             B_Start.Text = "PDF Olustur";
             B_Start.UseVisualStyleBackColor = true;
@@ -75,9 +80,9 @@
             L_ProcessStatus.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
             L_ProcessStatus.Location = new Point(12, 19);
             L_ProcessStatus.Name = "L_ProcessStatus";
-            L_ProcessStatus.Size = new Size(378, 356);
+            L_ProcessStatus.Size = new Size(378, 313);
             L_ProcessStatus.TabIndex = 3;
-            L_ProcessStatus.Text = "PDF Yapmak istediginiz Z-Kitabinizi bir kere acip kapamaniz yeterlidir.";
+            L_ProcessStatus.Text = "PDF Yapmak istedigin Z-Kitabini acip baslata bas cnm";
             L_ProcessStatus.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // linkLabel1
@@ -95,19 +100,59 @@
             T_ProcessTimer.Enabled = true;
             T_ProcessTimer.Interval = 1000;
             // 
+            // GB_Methods
+            // 
+            GB_Methods.Controls.Add(RB_Sys1);
+            GB_Methods.Controls.Add(RB_Sysb);
+            GB_Methods.Location = new Point(12, 335);
+            GB_Methods.Name = "GB_Methods";
+            GB_Methods.Size = new Size(378, 49);
+            GB_Methods.TabIndex = 5;
+            GB_Methods.TabStop = false;
+            GB_Methods.Text = "Method";
+            // 
+            // RB_Sys1
+            // 
+            RB_Sys1.AutoSize = true;
+            RB_Sys1.Location = new Point(92, 22);
+            RB_Sys1.Name = "RB_Sys1";
+            RB_Sys1.Size = new Size(63, 19);
+            RB_Sys1.TabIndex = 1;
+            RB_Sys1.TabStop = true;
+            RB_Sys1.Text = "sys1.dll";
+            RB_Sys1.UseVisualStyleBackColor = true;
+            RB_Sys1.CheckedChanged += Methods_CheckedChanged;
+            // 
+            // RB_Sysb
+            // 
+            RB_Sysb.AutoSize = true;
+            RB_Sysb.Checked = true;
+            RB_Sysb.Location = new Point(15, 22);
+            RB_Sysb.Name = "RB_Sysb";
+            RB_Sysb.Size = new Size(71, 19);
+            RB_Sysb.TabIndex = 0;
+            RB_Sysb.TabStop = true;
+            RB_Sysb.Text = "sysb.frns";
+            RB_Sysb.UseVisualStyleBackColor = true;
+            RB_Sysb.CheckedChanged += Methods_CheckedChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(GB_Methods);
             Controls.Add(linkLabel1);
             Controls.Add(L_ProcessStatus);
             Controls.Add(B_Start);
             Controls.Add(GB_Logs);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
-            Text = "Form1";
+            Text = "zemi's fernus decryptor";
             GB_Logs.ResumeLayout(false);
             GB_Logs.PerformLayout();
+            GB_Methods.ResumeLayout(false);
+            GB_Methods.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -120,5 +165,8 @@
         private Label L_ProcessStatus;
         private LinkLabel linkLabel1;
         private System.Windows.Forms.Timer T_ProcessTimer;
+        private GroupBox GB_Methods;
+        private RadioButton RB_Sys1;
+        private RadioButton RB_Sysb;
     }
 }
